@@ -3,13 +3,24 @@ import { motion } from "framer-motion"
 export default function Hero() {
 
   return (
-    <section className="relative min-h-screen flex items-center px-8">
+    <section className="relative min-h-screen flex items-center px-8 overflow-hidden">
+
+      {/* hero background (slightly darker) */}
+      <div className="absolute inset-0 -z-20
+                      bg-gradient-to-b
+                      from-[#d6dbe5]
+                      via-[#e1e6ef]
+                      to-[#edf1f7]
+                      dark:from-[#09090c]
+                      dark:via-[#0c0c11]
+                      dark:to-[#101017]">
+      </div>
 
       {/* background wash */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute top-1/2 left-1/4
                         w-[800px] h-[800px]
-                        bg-accent/15 blur-[220px] rounded-full">
+                        bg-accent/20 blur-[220px] rounded-full">
         </div>
       </div>
 
@@ -53,45 +64,71 @@ export default function Hero() {
           </div>
         </motion.div>
 
-        {/* RIGHT : ABSTRACT GRAPHIC */}
-        <motion.div
-  initial={{ opacity: 0, y: 20 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ duration: 1.2, ease: "easeOut" }}
-  className="relative h-[460px] w-full"
->
+        {/* RIGHT : FUTURISTIC MOTION GRAPHIC */}
+        <div className="relative h-[480px] w-full flex items-center justify-center">
 
-  {/* soft accent wash behind */}
-  <div className="absolute inset-0
-                  bg-accent/10
-                  blur-[140px]
-                  rounded-full">
-  </div>
+          {/* ambient glow */}
+          <div className="absolute inset-0
+                          bg-accent/10
+                          blur-[160px]
+                          rounded-full">
+          </div>
 
-  {/* back outline */}
-  <div className="absolute top-8 left-8
-                  w-72 h-72
-                  border border-gray-300/40 dark:border-white/10
-                  rounded-2xl">
-  </div>
+          {/* orbit container */}
+          <motion.div
+            animate={{ rotate: 360 }}
+            transition={{
+              repeat: Infinity,
+              duration: 42,
+              ease: "linear",
+            }}
+            className="relative w-80 h-80"
+          >
 
-  {/* middle outline */}
-  <div className="absolute top-16 left-16
-                  w-72 h-72
-                  border border-gray-300/60 dark:border-white/20
-                  rounded-2xl">
-  </div>
+            {/* OUTER STRUCTURE */}
+            <div className="absolute inset-0
+                            border border-gray-400/60 dark:border-white/20
+                            rounded-3xl">
+            </div>
 
-  {/* front glass plane */}
-  <div className="absolute top-24 left-24
-                  w-72 h-72
-                  backdrop-blur-md
-                  bg-white/40 dark:bg-white/5
-                  border border-white/30 dark:border-white/10
-                  rounded-2xl">
-  </div>
+            {/* middle floating plane */}
+            <motion.div
+              animate={{
+                x: [0, 14, 0, -14, 0],
+                y: [0, -14, 0, 14, 0],
+              }}
+              transition={{
+                repeat: Infinity,
+                duration: 10,
+                ease: "easeInOut",
+              }}
+              className="absolute inset-6
+                         backdrop-blur-md
+                         bg-white/35 dark:bg-white/5
+                         border border-white/30 dark:border-white/15
+                         rounded-2xl">
+            </motion.div>
 
-</motion.div>
+            {/* front accent plane */}
+            <motion.div
+              animate={{
+                x: [0, -10, 0, 10, 0],
+                y: [0, 10, 0, -10, 0],
+              }}
+              transition={{
+                repeat: Infinity,
+                duration: 12,
+                ease: "easeInOut",
+              }}
+              className="absolute inset-12
+                         backdrop-blur-md
+                         bg-white/50 dark:bg-white/5
+                         border border-white/40 dark:border-white/20
+                         rounded-xl">
+            </motion.div>
+
+          </motion.div>
+        </div>
 
       </div>
     </section>
