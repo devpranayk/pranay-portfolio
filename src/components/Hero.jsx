@@ -41,7 +41,7 @@ export default function Hero() {
               className="text-accent font-medium text-sm
                          underline underline-offset-8 hover:opacity-80 transition"
             >
-              View Resumee
+              View Resumeeee
             </a>
 
             <a
