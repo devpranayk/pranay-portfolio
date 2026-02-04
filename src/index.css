@@ -14,8 +14,6 @@ body {
   color: #e5e7eb;
 }
 
-
-
 /* glass card utility */
 .glass {
   @apply backdrop-blur-md bg-glassLight dark:bg-glassDark
