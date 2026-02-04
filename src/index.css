@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* global body stuff */
+body {
+  background-color: #e9edf3; /* neutral, editorial, not white */
+  color: #1f2937;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dark body {
+  background-color: #0b0b0f;
+  color: #e5e7eb;
+}
+
+
+
+/* glass card utility */
+.glass {
+  @apply backdrop-blur-md bg-glassLight dark:bg-glassDark
+         border border-white/40 dark:border-white/10
+         rounded-xl shadow-[0_10px_40px_rgba(0,0,0,0.06)];
+}
