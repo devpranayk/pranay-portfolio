@@ -50,7 +50,7 @@ export default function Hero() {
 
           <div className="mt-12 flex gap-8">
             <a
-              href="/Pranay_Kandikonda_Resume.pdf"
+              href="/PranayKResume.pdf"
               target="_blank"
               className="text-accent font-medium text-sm
                          underline underline-offset-8 hover:opacity-80 transition"

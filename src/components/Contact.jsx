@@ -79,19 +79,21 @@ export default function Contact() {
           </a>
 
           <a
-            href="/Pranay_Kandikonda_Resume.pdf"
-            target="_blank"
-            className="group rounded-2xl p-6
-                       backdrop-blur-md
-                       bg-white/60 dark:bg-white/5
-                       border border-white/40 dark:border-white/15
-                       transition hover:scale-[1.02]"
-          >
-            <p className="text-sm text-gray-500">Resume</p>
-            <p className="mt-2 font-medium group-hover:text-accent">
-              Download PDF
-            </p>
-          </a>
+              href="/PranayKResume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group rounded-2xl p-6
+                         backdrop-blur-md
+                         bg-white/60 dark:bg-white/5
+                         border border-white/40 dark:border-white/15
+                         transition hover:scale-[1.02]"
+            >
+              <p className="text-sm text-gray-500">Resume</p>
+              <p className="mt-2 font-medium group-hover:text-accent">
+                Download PDF
+              </p>
+            </a>
+
 
         </div>
 

@@ -33,7 +33,7 @@ const projects = [
     ],
     image: spotifyImg,
     live: "https://spotify-clone-silk-sigma.vercel.app/",
-    github: "PASTE_SPOTIFY_GITHUB_LINK",
+    github: "https://github.com/devpranayk/spotify-clone.git",
   },
   {
     title: "TrendPulse",
@@ -47,7 +47,7 @@ const projects = [
     ],
     image: trendPulseImg,
     live: "https://trendpulse-by-devpranayk.vercel.app/",
-    github: "PASTE_TRENDPULSE_GITHUB_LINK",
+    github: "https://github.com/devpranayk/trendPulse.git",
   },
   {
     title: "Organization User Management",
@@ -60,8 +60,8 @@ const projects = [
       "Clean admin interface",
     ],
     image: orgUserImg,
-    frontend: "FRONTEND_GITHUB_LINK",
-    backend: "BACKEND_GITHUB_LINK",
+    frontend: "https://github.com/devpranayk/org-user-management/tree/main/org-user-management-frontend",
+    backend: "https://github.com/devpranayk/org-user-management.git",
   },
 ]
 
