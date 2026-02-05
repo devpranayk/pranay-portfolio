@@ -34,22 +34,24 @@ export default function Contact() {
         {/* Actions */}
         <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
 
-          <a
-            href="mailto:YOUR_EMAIL@gmail.com"
-            className="group rounded-2xl p-6
-                       backdrop-blur-md
-                       bg-white/60 dark:bg-white/5
-                       border border-white/40 dark:border-white/15
-                       transition hover:scale-[1.02]"
-          >
-            <p className="text-sm text-gray-500">Email</p>
-            <p className="mt-2 font-medium group-hover:text-accent">
-              YOUR_EMAIL@gmail.com
-            </p>
-          </a>
+                 <a
+         href={`mailto:your_email@gmail.com
+          ?subject=Regarding%20Portfolio
+          &body=Hi%20Pranay,%0A%0AI%20went%20through%20your%20portfolio%20and...`}
+        className="group rounded-2xl p-6
+                   backdrop-blur-md
+                   bg-white/60 dark:bg-white/5
+                  border border-white/40 dark:border-white/15
+                 transition hover:scale-[1.02]"
+       >
+        <p className="text-sm text-gray-500">Email</p>
+        <p className="mt-2 font-medium group-hover:text-accent">
+          pranayk74174174@gmail.com
+       </p>
+       </a>
 
           <a
-            href="https://www.linkedin.com/in/YOUR_LINKEDIN"
+            href="https://www.linkedin.com/in/pranay-kandikonda-2541a5232/"
             target="_blank"
             className="group rounded-2xl p-6
                        backdrop-blur-md
@@ -64,7 +66,7 @@ export default function Contact() {
           </a>
 
           <a
-            href="https://github.com/YOUR_GITHUB"
+            href="https://github.com/devpranayk"
             target="_blank"
             className="group rounded-2xl p-6
                        backdrop-blur-md
