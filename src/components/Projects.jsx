@@ -165,15 +165,28 @@ export default function Projects() {
                 viewport={{ once: true }}
                 className={reverse ? "md:order-1" : ""}
               >
-                <div className="relative rounded-3xl overflow-hidden
-                                backdrop-blur-xl
-                                bg-white/40 dark:bg-white/5
-                                border border-white/30">
+                <div className="group relative rounded-3xl overflow-hidden
+                backdrop-blur-xl
+                bg-white/40 dark:bg-white/5
+                border border-white/30
+                transition">
+
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-full object-cover"
+                      className="w-full h-full object-cover
+                               transition duration-500
+                               group-hover:scale-105"
                   />
+
+                  <div className="pointer-events-none absolute inset-0
+                opacity-0 group-hover:opacity-100
+                transition
+                bg-accent/10 blur-[80px]" />
+
+
+
+
                 </div>
               </motion.div>
             </div>
