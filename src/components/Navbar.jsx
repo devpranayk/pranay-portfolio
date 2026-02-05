@@ -8,31 +8,33 @@ export default function Navbar() {
   const [active, setActive] = useState("")
 
   useEffect(() => {
-            const observer = new IntersectionObserver(
-              (entries) => {
-                entries.forEach((entry) => {
-                  if (entry.isIntersecting) {
-                    if (entry.target.id === "intro") {
-                      setActive("")
-                    } else {
-                      setActive(entry.target.id)
-                    }
-                  }
-                })
-              },
-             {
-                threshold: 0.3,
-                rootMargin: "-120px 0px -40% 0px",
-              }           
-            )
+  const observer = new IntersectionObserver(
+    (entries) => {
+      const visibleSections = entries
+        .filter((entry) => entry.isIntersecting)
+        .sort(
+          (a, b) => a.boundingClientRect.top - b.boundingClientRect.top
+        )
 
-    sections.forEach((id) => {
-      const el = document.getElementById(id)
-      if (el) observer.observe(el)
-    })
+      if (visibleSections.length > 0) {
+        const id = visibleSections[0].target.id
+        setActive(id === "intro" ? "" : id)
+      }
+    },
+    {
+      rootMargin: "-120px 0px -50% 0px",
+      threshold: 0.1,
+    }
+  )
 
-    return () => observer.disconnect()
-  }, [])
+  sections.forEach((id) => {
+    const el = document.getElementById(id)
+    if (el) observer.observe(el)
+  })
+
+  return () => observer.disconnect()
+}, [])
+
 
   return (
     <nav className="fixed top-0 w-full z-50 px-6 py-4">
