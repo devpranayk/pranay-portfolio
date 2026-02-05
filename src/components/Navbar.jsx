@@ -8,20 +8,23 @@ export default function Navbar() {
   const [active, setActive] = useState("")
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            if (entry.target.id === "intro") {
-              setActive("")
-            } else {
-              setActive(entry.target.id)
-            }
-          }
-        })
-      },
-      { threshold: 0.6 }
-    )
+            const observer = new IntersectionObserver(
+              (entries) => {
+                entries.forEach((entry) => {
+                  if (entry.isIntersecting) {
+                    if (entry.target.id === "intro") {
+                      setActive("")
+                    } else {
+                      setActive(entry.target.id)
+                    }
+                  }
+                })
+              },
+             {
+                threshold: 0.3,
+                rootMargin: "-120px 0px -40% 0px",
+              }           
+            )
 
     sections.forEach((id) => {
       const el = document.getElementById(id)

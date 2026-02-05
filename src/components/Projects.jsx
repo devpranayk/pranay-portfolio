@@ -1,41 +1,39 @@
 import { motion } from "framer-motion"
 
+import careerNexusImg from "../assets/careernexus.png"
+import spotifyImg from "../assets/spotify.png"
+import trendPulseImg from "../assets/trendpulse.png"
+import orgUserImg from "../assets/org-user-mng.png"
+
 const projects = [
   {
     title: "CareerNexus",
     subtitle: "Placement & Recruitment Platform",
     description:
-      "A full-stack placement system with role-based access for Admin, TPO, Recruiter, and Students, featuring dashboards, job workflows, and real-time notifications.",
+      "A full-stack placement platform with role-based access for Admin, TPO, Recruiter, and Students, featuring dashboards, job workflows, and real-time notifications.",
     features: [
       "Role-based authentication & dashboards",
       "Real-time notifications (WebSockets)",
       "Job posting & application workflows",
       "Responsive modern UI",
     ],
-    tech: ["React", "Tailwind", "Node.js", "Express", "WebSockets"],
-    github: {
-      frontend:
-        "https://github.com/CareerNexus-Pragati-Engineering-College/CareerNexus-Frontend",
-      backend:
-        "https://github.com/CareerNexus-Pragati-Engineering-College/CareerNexus-Backend",
-    },
-    highlight: true,
+    image: careerNexusImg,
+    live: "https://carrernexus-c413a.web.app/",
+    github: "https://github.com/CareerNexus-Pragati-Engineering-College",
   },
   {
     title: "Spotify Clone",
     subtitle: "Music Streaming Web Application",
     description:
-      "A Spotify-inspired full-stack application focusing on clean UI, authentication, and dynamic content rendering.",
+      "A Spotify-inspired full-stack web application focusing on clean UI, authentication, and dynamic content rendering.",
     features: [
       "Authentication flow",
-      "Dynamic song & artist views",
+      "Trending songs & artists",
       "Reusable React components",
     ],
-    tech: ["React", "Node.js", "Express", "MongoDB"],
-    github: {
-      frontend: "YOUR_SPOTIFY_FRONTEND_GITHUB",
-      backend: "YOUR_SPOTIFY_BACKEND_GITHUB",
-    },
+    image: spotifyImg,
+    live: "https://spotify-clone-silk-sigma.vercel.app/",
+    github: "PASTE_SPOTIFY_GITHUB_LINK",
   },
   {
     title: "TrendPulse",
@@ -47,131 +45,142 @@ const projects = [
       "Category filtering",
       "Clean responsive UI",
     ],
-    tech: ["React", "Express", "GNews API"],
-    github: {
-      frontend: "YOUR_TRENDPULSE_GITHUB",
-    },
+    image: trendPulseImg,
+    live: "https://trendpulse-by-devpranayk.vercel.app/",
+    github: "PASTE_TRENDPULSE_GITHUB_LINK",
+  },
+  {
+    title: "Organization User Management",
+    subtitle: "Role-based Organization & User Management System",
+    description:
+      "A system to manage organizations, users, and roles with structured access control and secure backend integration.",
+    features: [
+      "Organization & user management",
+      "Role-based access control",
+      "Clean admin interface",
+    ],
+    image: orgUserImg,
+    frontend: "FRONTEND_GITHUB_LINK",
+    backend: "BACKEND_GITHUB_LINK",
   },
 ]
 
 export default function Projects() {
   return (
     <section id="projects" className="relative px-8 pt-48 pb-32">
-      <div className="max-w-6xl mx-auto">
+  <div className="max-w-6xl mx-auto">
 
-        {/* Header */}
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="text-4xl md:text-5xl font-hero"
-        >
-          Selected Projects
-        </motion.h2>
+    {/* Section Header */}
+    <div className="max-w-2xl mb-32">
+      <h2 className="text-4xl md:text-5xl font-hero">
+        Projects
+      </h2>
 
-        <p className="mt-6 text-lg text-gray-700 dark:text-gray-400 max-w-2xl">
-          A curated set of projects demonstrating full-stack development,
-          system design thinking, and modern UI execution.
-        </p>
+      <p className="mt-6 text-lg text-gray-700 dark:text-gray-400">
+        A selection of real-world projects showcasing full-stack development,
+        system design thinking, and modern UI execution.
+      </p>
+    </div>
 
-        {/* Projects */}
-        <div className="mt-32 space-y-40">
-          {projects.map((project, index) => {
-            const reverse = index % 2 !== 0
+    {/* Projects */}
+    <div className="space-y-40">
 
-            return (
-              <div
-                key={index}
-                className={`grid md:grid-cols-2 gap-20 items-center ${
-                  reverse ? "md:flex-row-reverse" : ""
-                }`}
+
+        {projects.map((project, index) => {
+          const reverse = index % 2 !== 0
+
+          return (
+            <div
+              key={index}
+              className={`grid md:grid-cols-2 gap-20 items-center`}
+            >
+              {/* TEXT */}
+              <motion.div
+                initial={{ opacity: 0, x: reverse ? 60 : -60 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8 }}
+                viewport={{ once: true }}
+                className={reverse ? "md:order-2" : ""}
               >
-                {/* Visual Panel */}
-                <motion.div
-                  initial={{ opacity: 0, x: reverse ? 60 : -60 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.8, ease: "easeOut" }}
-                  viewport={{ once: true }}
-                  className={`relative h-[360px] rounded-3xl
-                              backdrop-blur-xl
-                              bg-white/50 dark:bg-white/5
-                              border border-white/40 dark:border-white/15
-                              ${
-                                project.highlight
-                                  ? "scale-105"
-                                  : ""
-                              }`}
-                >
-                  {/* Accent Glow */}
-                  <div className="absolute inset-0 rounded-3xl
-                                  bg-accent/10 blur-[120px]" />
-                </motion.div>
+                <h3 className="text-3xl font-semibold">{project.title}</h3>
+                <p className="mt-2 text-gray-600 dark:text-gray-400">
+                  {project.subtitle}
+                </p>
 
-                {/* Content Panel */}
-                <motion.div
-                  initial={{ opacity: 0, x: reverse ? -60 : 60 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.8, ease: "easeOut" }}
-                  viewport={{ once: true }}
-                >
-                  <h3 className="text-3xl font-semibold">
-                    {project.title}
-                  </h3>
-                  <p className="mt-2 text-gray-600 dark:text-gray-400">
-                    {project.subtitle}
-                  </p>
+                <p className="mt-6 text-gray-700 dark:text-gray-400 max-w-xl">
+                  {project.description}
+                </p>
 
-                  <p className="mt-6 text-gray-700 dark:text-gray-400 max-w-xl">
-                    {project.description}
-                  </p>
+                <ul className="mt-6 space-y-2 text-gray-700 dark:text-gray-400">
+                  {project.features.map((f, i) => (
+                    <li key={i}>— {f}</li>
+                  ))}
+                </ul>
 
-                  <ul className="mt-6 space-y-2 text-gray-700 dark:text-gray-400">
-                    {project.features.map((f, i) => (
-                      <li key={i}>— {f}</li>
-                    ))}
-                  </ul>
+                <div className="mt-8 flex gap-6 text-sm">
+                  {project.live && (
+                    <a
+                      href={project.live}
+                      target="_blank"
+                      className="text-accent underline underline-offset-8"
+                    >
+                      Live Demo
+                    </a>
+                  )}
+                  {project.github && (
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      className="text-accent underline underline-offset-8"
+                    >
+                      GitHub
+                    </a>
+                  )}
+                  {project.frontend && (
+                    <a
+                      href={project.frontend}
+                      target="_blank"
+                      className="text-accent underline underline-offset-8"
+                    >
+                      Frontend Repo
+                    </a>
+                  )}
+                  {project.backend && (
+                    <a
+                      href={project.backend}
+                      target="_blank"
+                      className="text-accent underline underline-offset-8"
+                    >
+                      Backend Repo
+                    </a>
+                  )}
+                </div>
+              </motion.div>
 
-                  <div className="mt-6 flex flex-wrap gap-3">
-                    {project.tech.map((t, i) => (
-                      <span
-                        key={i}
-                        className="px-4 py-2 text-sm rounded-full
-                                   bg-white/70 dark:bg-white/10
-                                   border border-white/40 dark:border-white/20"
-                      >
-                        {t}
-                      </span>
-                    ))}
-                  </div>
-
-                  <div className="mt-8 flex gap-6 text-sm">
-                    {project.github.frontend && (
-                      <a
-                        href={project.github.frontend}
-                        target="_blank"
-                        className="text-accent underline underline-offset-8"
-                      >
-                        Frontend Code
-                      </a>
-                    )}
-                    {project.github.backend && (
-                      <a
-                        href={project.github.backend}
-                        target="_blank"
-                        className="text-accent underline underline-offset-8"
-                      >
-                        Backend Code
-                      </a>
-                    )}
-                  </div>
-                </motion.div>
-              </div>
-            )
-          })}
-        </div>
-
+              {/* IMAGE */}
+              <motion.div
+                initial={{ opacity: 0, x: reverse ? -60 : 60 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8 }}
+                viewport={{ once: true }}
+                className={reverse ? "md:order-1" : ""}
+              >
+                <div className="relative rounded-3xl overflow-hidden
+                                backdrop-blur-xl
+                                bg-white/40 dark:bg-white/5
+                                border border-white/30">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </motion.div>
+            </div>
+          )
+        })}
       </div>
+    </div>
     </section>
   )
 }
