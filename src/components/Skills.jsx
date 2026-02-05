@@ -33,8 +33,7 @@ const skillsData = [
   {
     title: "Cloud Platforms",
     skills: [
-      "Google Cloud Platform (GCP)",
-      "Associate Cloud Engineer (Certified)",
+      "Google Cloud Platform (GCP) - Associate Cloud Engineer (Certified)",
     ],
   },
 ]
