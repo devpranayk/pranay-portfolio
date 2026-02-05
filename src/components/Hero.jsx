@@ -3,7 +3,10 @@ import { motion } from "framer-motion"
 export default function Hero() {
 
   return (
-    <section className="relative min-h-screen flex items-center px-8 overflow-hidden">
+           <section
+         id="intro"
+         className="relative min-h-screen flex items-center px-8 overflow-hidden"
+       >
 
       {/* hero background (slightly darker) */}
       <div className="absolute inset-0 -z-20
