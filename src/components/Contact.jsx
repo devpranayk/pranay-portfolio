@@ -35,7 +35,7 @@ export default function Contact() {
         <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
 
                  <a
-         href={`mailto:your_email@gmail.com
+         href={`mailto:pranayk74174174@gmail.com
           ?subject=Regarding%20Portfolio
           &body=Hi%20Pranay,%0A%0AI%20went%20through%20your%20portfolio%20and...`}
         className="group rounded-2xl p-6
