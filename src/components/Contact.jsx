@@ -81,7 +81,7 @@ export default function Contact() {
           </a>
 
           <a
-              href="/PranayKResume.pdf"
+              href="/PranayKandikonda_dev_resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="group rounded-2xl p-6
