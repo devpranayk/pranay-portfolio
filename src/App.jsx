@@ -7,6 +7,9 @@ import Contact from "./components/Contact"
 import BackToTop from "./components/BackToTop"
 import Footer from "./components/Footer"
 
+
+
+
 function App() {
   return (
     <>
@@ -37,6 +40,7 @@ function App() {
       {/* Footer */}
       <Footer />
     </>
+    
   )
 }
 

@@ -4,8 +4,14 @@ import App from './App'
 import './index.css'
 import ThemeProvider from './context/themeContext'
 
+
+
 ReactDOM.createRoot(document.getElementById('root')).render(
+
+
   <ThemeProvider>
     <App />
   </ThemeProvider>
+
+  
 )
