@@ -37,9 +37,11 @@ export default function Hero() {
 
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
 
-        
 
-        {/* LEFT : TEXT POSTER */}
+
+                                         {/* LEFT : TEXT POSTER */}
+
+
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
@@ -58,6 +60,8 @@ export default function Hero() {
             on performance, clarity, and modern system-driven design.
           </p>
 
+
+
           <div className="mt-12 flex gap-8">
             <a
               href="/PranayKandikonda_dev_resume.pdf"
@@ -73,19 +77,28 @@ export default function Hero() {
               className="text-sm hover:opacity-70 transition"
             >
               Contact
+
             </a>
           </div>
         </motion.div>
 
-        {/* RIGHT : FUTURISTIC MOTION GRAPHIC */}
+
+
+                                 {/* RIGHT : FUTURISTIC MOTION GRAPHIC */}
+
+
         <div className="relative h-[480px] w-full flex items-center justify-center">
 
-          {/* ambient glow */}
+
+
+                                                       {/* ambient glow */}
           <div className="absolute inset-0
                           bg-accent/10
                           blur-[160px]
                           rounded-full">
           </div>
+
+
 
           {/* orbit container */}
           <motion.div
