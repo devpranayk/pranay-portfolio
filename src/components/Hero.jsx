@@ -3,12 +3,15 @@ import { motion } from "framer-motion"
 export default function Hero() {
 
   return (
+
            <section
          id="intro"
          className="relative min-h-screen flex items-center px-8 overflow-hidden"
        >
 
-      {/* hero background (slightly darker) */}
+                                      {/* hero background (slightly darker) */}
+
+
       <div className="absolute inset-0 -z-20
                       bg-gradient-to-b
                       from-[#d6dbe5]
@@ -19,7 +22,12 @@ export default function Hero() {
                       dark:to-[#101017]">
       </div>
 
-      {/* background wash */}
+
+                                              {/* background wash */}
+
+
+
+
       <div className="absolute inset-0 -z-10">
         <div className="absolute top-1/2 left-1/4
                         w-[800px] h-[800px]
@@ -28,6 +36,8 @@ export default function Hero() {
       </div>
 
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
+
+        
 
         {/* LEFT : TEXT POSTER */}
         <motion.div
