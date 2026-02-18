@@ -100,7 +100,7 @@ export default function Hero() {
 
 
 
-          {/* orbit container */}
+                                                               {/* orbit container */}
           <motion.div
             animate={{ rotate: 360 }}
             transition={{
@@ -111,13 +111,17 @@ export default function Hero() {
             className="relative w-80 h-80"
           >
 
-            {/* OUTER STRUCTURE */}
+                                                                  
+                                                                  
+                                                                   {/* OUTER STRUCTURE */}
             <div className="absolute inset-0
                             border border-gray-400/60 dark:border-white/20
                             rounded-3xl">
             </div>
 
-            {/* middle floating plane */}
+                                                        {/* middle floating plane */}
+
+
             <motion.div
               animate={{
                 x: [0, 14, 0, -14, 0],
@@ -135,7 +139,12 @@ export default function Hero() {
                          rounded-2xl">
             </motion.div>
 
-            {/* front accent plane */}
+
+                                               
+                                               
+                                                      {/* front accent plane */}
+
+
             <motion.div
               animate={{
                 x: [0, -10, 0, 10, 0],
@@ -153,10 +162,14 @@ export default function Hero() {
                          rounded-xl">
             </motion.div>
 
+
+
+
           </motion.div>
         </div>
 
       </div>
     </section>
   )
+  
 }
