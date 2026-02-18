@@ -1,12 +1,20 @@
 import { motion } from "framer-motion"
 
+
+
+
 export default function Contact() {
+
   return (
+
     <section
       id="contact"
       className="relative px-8 pt-48 pb-32"
     >
+
       <div className="max-w-6xl mx-auto">
+
+
 
         {/* Heading */}
         <motion.h2
@@ -16,8 +24,13 @@ export default function Contact() {
           viewport={{ once: true }}
           className="text-4xl md:text-5xl font-hero"
         >
+
+
           Let’s Connect
         </motion.h2>
+
+
+
 
         <motion.p
           initial={{ opacity: 0 }}
@@ -31,7 +44,12 @@ export default function Contact() {
           together, I’d love to hear from you.
         </motion.p>
 
-        {/* Actions */}
+
+
+
+                                      {/* Actions */}
+
+
         <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
 
                  <a
@@ -44,11 +62,13 @@ export default function Contact() {
                   border border-white/40 dark:border-white/15
                  transition hover:scale-[1.02]"
        >
+
         <p className="text-sm text-gray-500">Email</p>
         <p className="mt-2 font-medium group-hover:text-accent">
           pranayk74174174@gmail.com
        </p>
        </a>
+
 
           <a
             href="https://www.linkedin.com/in/pranay-kandikonda-2541a5232/"
@@ -65,6 +85,8 @@ export default function Contact() {
             </p>
           </a>
 
+
+
           <a
             href="https://github.com/devpranayk"
             target="_blank"
@@ -79,6 +101,7 @@ export default function Contact() {
               View Repositories
             </p>
           </a>
+
 
           <a
               href="/PranayKandikonda_dev_resume.pdf"
@@ -97,7 +120,9 @@ export default function Contact() {
             </a>
 
 
+
         </div>
+
 
       </div>
     </section>
