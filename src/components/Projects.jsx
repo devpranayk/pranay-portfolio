@@ -182,10 +182,13 @@ export default function Projects() {
                   )}
 
                 </div>
-                
+
               </motion.div>
 
-              {/* IMAGE */}
+                                                  {/* IMAGE */}
+
+
+
               <motion.div
                 initial={{ opacity: 0, x: reverse ? -60 : 60 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -207,6 +210,8 @@ export default function Projects() {
                                group-hover:scale-105"
                   />
 
+
+
                   <div className="pointer-events-none absolute inset-0
                 opacity-0 group-hover:opacity-100
                 transition
@@ -216,12 +221,18 @@ export default function Projects() {
 
 
                 </div>
+
               </motion.div>
+              
             </div>
           )
         })}
+
       </div>
+
     </div>
+
     </section>
+    
   )
 }
