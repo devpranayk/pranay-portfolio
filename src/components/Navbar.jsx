@@ -1,11 +1,16 @@
 import { useContext, useEffect, useState } from "react"
 import { themeContext } from "../context/themeContext"
 
+
+
 const sections = ["intro", "about", "skills", "projects", "contact"]
+
+
 
 export default function Navbar() {
   const { dark, toggleTheme } = useContext(themeContext)
   const [active, setActive] = useState("")
+
 
   useEffect(() => {
   const observer = new IntersectionObserver(
@@ -20,23 +25,32 @@ export default function Navbar() {
         const id = visibleSections[0].target.id
         setActive(id === "intro" ? "" : id)
       }
+
     },
+
     {
+
       rootMargin: "-120px 0px -50% 0px",
       threshold: 0.1,
     }
   )
+
+
 
   sections.forEach((id) => {
     const el = document.getElementById(id)
     if (el) observer.observe(el)
   })
 
+
   return () => observer.disconnect()
 }, [])
 
 
+
   return (
+
+
     <nav className="fixed top-0 w-full z-50 px-6 py-4">
       <div className="glass max-w-6xl mx-auto flex items-center justify-between px-6 py-3">
 
@@ -61,6 +75,8 @@ export default function Navbar() {
             </a>
           ))}
 
+
+
           <button
             onClick={toggleTheme}
             className="ml-4 px-3 py-1 rounded-md border border-gray-300 dark:border-gray-600"
@@ -71,5 +87,7 @@ export default function Navbar() {
         </div>
       </div>
     </nav>
+
+    
   )
 }

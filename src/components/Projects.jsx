@@ -5,8 +5,12 @@ import spotifyImg from "../assets/spotify.png"
 import trendPulseImg from "../assets/trendpulse.png"
 import orgUserImg from "../assets/org-user-mng.png"
 
+
+
+
 const projects = [
   {
+
     title: "CareerNexus",
     subtitle: "Placement & Recruitment Platform",
     description:
@@ -21,6 +25,7 @@ const projects = [
     live: "https://carrernexus-c413a.web.app/",
     github: "https://github.com/CareerNexus-Pragati-Engineering-College",
   },
+
   {
     title: "Spotify Clone",
     subtitle: "Music Streaming Web Application",
@@ -63,18 +68,26 @@ const projects = [
     frontend: "https://github.com/devpranayk/org-user-management/tree/main/org-user-management-frontend",
     backend: "https://github.com/devpranayk/org-user-management.git",
   },
+
 ]
+
 
 export default function Projects() {
   return (
     <section id="projects" className="relative px-8 pt-48 pb-32">
   <div className="max-w-6xl mx-auto">
 
-    {/* Section Header */}
+
+
+                                            {/* Section Header */}
+
+
     <div className="max-w-2xl mb-32">
       <h2 className="text-4xl md:text-5xl font-hero">
         Projects
       </h2>
+
+
 
       <p className="mt-6 text-lg text-gray-700 dark:text-gray-400">
         A selection of real-world projects showcasing full-stack development,
@@ -82,7 +95,12 @@ export default function Projects() {
       </p>
     </div>
 
-    {/* Projects */}
+
+
+                                                               {/* Projects */}
+
+
+
     <div className="space-y-40">
 
 
@@ -94,7 +112,11 @@ export default function Projects() {
               key={index}
               className={`grid md:grid-cols-2 gap-20 items-center`}
             >
-              {/* TEXT */}
+
+
+                                                                   {/* TEXT */}
+
+                                                                   
               <motion.div
                 initial={{ opacity: 0, x: reverse ? 60 : -60 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -107,16 +129,19 @@ export default function Projects() {
                   {project.subtitle}
                 </p>
 
+
                 <p className="mt-6 text-gray-700 dark:text-gray-400 max-w-xl">
                   {project.description}
                 </p>
+
 
                 <ul className="mt-6 space-y-2 text-gray-700 dark:text-gray-400">
                   {project.features.map((f, i) => (
                     <li key={i}>— {f}</li>
                   ))}
                 </ul>
-
+                
+                
                 <div className="mt-8 flex gap-6 text-sm">
                   {project.live && (
                     <a
@@ -153,8 +178,11 @@ export default function Projects() {
                     >
                       Backend Repo
                     </a>
+
                   )}
+
                 </div>
+                
               </motion.div>
 
               {/* IMAGE */}
